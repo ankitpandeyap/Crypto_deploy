@@ -1,0 +1,28 @@
+# Maven build artifacts
+target/
+
+# Logs
+logs/
+*.log
+*.tmp
+*.temp
+
+# IDE files and directories
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# Git related files
+.git/
+.gitignore
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Other common temporary files
+tmp/
+temp/
