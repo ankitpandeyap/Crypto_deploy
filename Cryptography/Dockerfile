@@ -18,8 +18,8 @@ COPY src ./src
 RUN mvn clean install -DskipTests
 
 # Use a JRE-only base image for the final runtime, even smaller
-# --- CRITICAL CHANGE ON THIS LINE ---
-FROM openjdk:17-jre 
+# --- NEW CRITICAL CHANGE ON THIS LINE ---
+FROM openjdk:17-jre-slim-bullseye
 
 # Set the working directory
 WORKDIR /app
