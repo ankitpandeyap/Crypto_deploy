@@ -124,7 +124,8 @@ public class MessageServiceImpl implements MessageService {
 		msg.setTimestamp(LocalDateTime.now());
 		msg.setRead(false);
 		msg.setStarred(false);
-		messageRepo.save(msg);		log.info("Encrypted message persisted for sender: {} to receiver: {}. Message ID: {}", sender.getUserName(),
+		messageRepo.save(msg);
+		log.info("Encrypted message persisted for sender: {} to receiver: {}. Message ID: {}", sender.getUserName(),
 				receiver.getUserName(), msg.getMessageId());
 
 		String receiverDerivedUserAesKeyBase64 = receiver.getDerivedUserEncryptionKey();
@@ -295,7 +296,7 @@ public class MessageServiceImpl implements MessageService {
 
 	@Override
 	@Transactional
-	public String verifyPasskeyAndGetKey(Long messageId, User currentUser, String passkey) throws Exception { 
+	public String verifyPasskeyAndGetKey(Long messageId, User currentUser, String passkey) throws Exception {
 		log.info("Verifying passkey for user={} on message={}", currentUser.getUserName(), messageId);
 
 		Message msg = messageRepo.findById(messageId).orElseThrow(() -> new NotFoundException("Message not found")); // Changed
