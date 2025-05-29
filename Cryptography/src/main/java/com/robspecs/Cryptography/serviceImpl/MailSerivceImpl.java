@@ -10,7 +10,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-import org.thymeleaf.spring6.SpringTemplateEngine;
+
 
 import com.robspecs.Cryptography.exceptions.EmailSendingException; // New import for custom exception
 import com.robspecs.Cryptography.service.MailService;
